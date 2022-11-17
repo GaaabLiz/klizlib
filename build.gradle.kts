@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform") version "1.7.10"
+    id("maven-publish")
 }
 
 group = "it.gabliz"
@@ -24,6 +25,7 @@ kotlin {
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation("org.junit.jupiter:junit-jupiter:5.8.2")
             }
         }
     }
